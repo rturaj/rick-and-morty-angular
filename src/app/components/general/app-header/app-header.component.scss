@@ -1,0 +1,10 @@
+.app {
+  &-header {
+    max-width: 1300px;
+    margin: 0 auto;
+    &-logo {
+      text-align: center;
+      height: 80px;
+    }
+  }
+}
