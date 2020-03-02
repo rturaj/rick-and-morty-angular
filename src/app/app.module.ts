@@ -1,8 +1,11 @@
 import { BrowserModule } from "@angular/platform-browser";
 import { NgModule } from "@angular/core";
 import { RouterModule, Routes } from "@angular/router";
+import { HttpClientModule } from "@angular/common/http";
 
 import { AppComponent } from "./app.component";
+//services
+import { ApiService } from "./services/api.service";
 
 //pages
 import { SingleCharacterComponent } from "./pages/single-character/single-character.component";
@@ -17,7 +20,8 @@ import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 
 const appRoutes: Routes = [
   { path: "characters/:id", component: SingleCharacterComponent },
-  { path: "characters", component: CharactersComponent }
+  { path: "characters", component: CharactersComponent },
+  { path: "", redirectTo: "characters", pathMatch: "full" }
 ];
 
 @NgModule({
@@ -34,9 +38,10 @@ const appRoutes: Routes = [
       { enableTracing: true } // <-- debugging purposes only
     ),
     BrowserAnimationsModule,
+    HttpClientModule,
     MatCardModule
   ],
-  providers: [],
+  providers: [ApiService],
   bootstrap: [AppComponent]
 })
 export class AppModule {}
