@@ -1,1 +1,12 @@
-<div>single character: {{ character$ ? character$.name : "" }}</div>
+<single-character-photo
+  *ngIf="character$"
+  [photo]="character$.image"
+></single-character-photo>
+<single-character-label
+  *ngIf="character$"
+  [label]="character$.name"
+></single-character-label>
+<single-character-details
+  *ngIf="character$"
+  [character]="character$"
+></single-character-details>

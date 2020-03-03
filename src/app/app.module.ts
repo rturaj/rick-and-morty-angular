@@ -24,6 +24,9 @@ import { MatTableModule } from "@angular/material/table";
 import { MatButtonModule } from "@angular/material/button";
 import { MatSelectModule } from "@angular/material/select";
 import { MatPaginatorModule } from "@angular/material/paginator";
+import { SingleCharacterPhotoComponent } from './components/single-character/single-character-photo/single-character-photo.component';
+import { SingleCharacterLabelComponent } from './components/single-character/single-character-label/single-character-label.component';
+import { SingleCharacterDetailsComponent } from './components/single-character/single-character-details/single-character-details.component';
 
 const appRoutes: Routes = [
   { path: "characters/:id", component: SingleCharacterComponent },
@@ -39,7 +42,10 @@ const appRoutes: Routes = [
     AppHeaderComponent,
     CharactersListComponent,
     CharactersToolbarComponent,
-    CharactersPaginationComponent
+    CharactersPaginationComponent,
+    SingleCharacterPhotoComponent,
+    SingleCharacterLabelComponent,
+    SingleCharacterDetailsComponent
   ],
   imports: [
     BrowserModule,

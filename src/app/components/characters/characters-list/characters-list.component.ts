@@ -9,6 +9,7 @@ import { Character } from "src/app/models/character.model";
 export class CharactersListComponent {
   @Input() characters: Character[];
   displayedColumns: string[] = [
+    "index",
     "name",
     "status",
     "species",

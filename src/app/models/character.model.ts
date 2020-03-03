@@ -5,8 +5,14 @@ export class Character {
   species: string;
   type: string;
   gender: string;
-  origin: object;
-  location: object;
+  origin: {
+    url: string;
+    name: string;
+  };
+  location: {
+    url: string;
+    name: string;
+  };
   image: string;
   episode: string[];
   url: string;

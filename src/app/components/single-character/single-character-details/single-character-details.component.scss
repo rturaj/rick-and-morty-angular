@@ -1,0 +1,9 @@
+.single-character-details {
+  max-width: 400px;
+  margin: 10px auto;
+  &-row {
+    display: flex;
+    justify-content: space-between;
+    padding: 5px;
+  }
+}
