@@ -27,4 +27,7 @@ export class ApiService {
       this.charactersParams = this.charactersParams.set(key, params[key]);
     });
   }
+  getCurrentPage() {
+    return Number(this.charactersParams.get("page"));
+  }
 }

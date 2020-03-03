@@ -1,4 +1,4 @@
 export class Info {
-  pages: string;
-  count: string;
+  pages: number;
+  count: number;
 }
