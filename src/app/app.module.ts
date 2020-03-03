@@ -2,6 +2,7 @@ import { BrowserModule } from "@angular/platform-browser";
 import { NgModule } from "@angular/core";
 import { RouterModule, Routes } from "@angular/router";
 import { HttpClientModule } from "@angular/common/http";
+import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 
 import { AppComponent } from "./app.component";
 //services
@@ -13,10 +14,12 @@ import { CharactersComponent } from "./pages/characters/characters.component";
 
 //custom components
 import { AppHeaderComponent } from "./components/general/app-header/app-header.component";
+import { CharactersListComponent } from "./components/characters/characters-list/characters-list.component";
 
 //angular material components
 import { MatCardModule } from "@angular/material/card";
-import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
+import { MatTableModule } from "@angular/material/table";
+import { MatButtonModule } from "@angular/material/button";
 
 const appRoutes: Routes = [
   { path: "characters/:id", component: SingleCharacterComponent },
@@ -29,7 +32,8 @@ const appRoutes: Routes = [
     AppComponent,
     SingleCharacterComponent,
     CharactersComponent,
-    AppHeaderComponent
+    AppHeaderComponent,
+    CharactersListComponent
   ],
   imports: [
     BrowserModule,
@@ -39,9 +43,11 @@ const appRoutes: Routes = [
     ),
     BrowserAnimationsModule,
     HttpClientModule,
-    MatCardModule
+    MatCardModule,
+    MatTableModule,
+    MatButtonModule
   ],
   providers: [ApiService],
   bootstrap: [AppComponent]
 })
-export class AppModule {}
+export class AppModule { }
