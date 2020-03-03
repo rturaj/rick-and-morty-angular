@@ -1,0 +1,10 @@
+.characters-toolbar {
+  padding: 10px;
+  height: 60px;
+  display: flex;
+  background: white;
+  margin-bottom: 20px;
+  &-item {
+    margin: 0 10px;
+  }
+}

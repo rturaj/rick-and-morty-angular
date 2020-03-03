@@ -15,11 +15,13 @@ import { CharactersComponent } from "./pages/characters/characters.component";
 //custom components
 import { AppHeaderComponent } from "./components/general/app-header/app-header.component";
 import { CharactersListComponent } from "./components/characters/characters-list/characters-list.component";
+import { CharactersToolbarComponent } from "./components/characters/characters-toolbar/characters-toolbar.component";
 
 //angular material components
 import { MatCardModule } from "@angular/material/card";
 import { MatTableModule } from "@angular/material/table";
 import { MatButtonModule } from "@angular/material/button";
+import { MatSelectModule } from "@angular/material/select";
 
 const appRoutes: Routes = [
   { path: "characters/:id", component: SingleCharacterComponent },
@@ -33,21 +35,20 @@ const appRoutes: Routes = [
     SingleCharacterComponent,
     CharactersComponent,
     AppHeaderComponent,
-    CharactersListComponent
+    CharactersListComponent,
+    CharactersToolbarComponent
   ],
   imports: [
     BrowserModule,
-    RouterModule.forRoot(
-      appRoutes,
-      { enableTracing: true } // <-- debugging purposes only
-    ),
+    RouterModule.forRoot(appRoutes),
     BrowserAnimationsModule,
     HttpClientModule,
     MatCardModule,
     MatTableModule,
-    MatButtonModule
+    MatButtonModule,
+    MatSelectModule
   ],
   providers: [ApiService],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {}

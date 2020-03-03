@@ -1,0 +1,19 @@
+<div class="characters-toolbar">
+  <mat-form-field class="characters-toolbar-item">
+    <mat-label>Status</mat-label>
+    <mat-select (selectionChange)="filterStatus($event)">
+      <mat-option *ngFor="let status of statuses" [value]="status.value">
+        {{ status.name }}
+      </mat-option>
+    </mat-select>
+  </mat-form-field>
+
+  <mat-form-field class="characters-toolbar-item">
+    <mat-label>Gender</mat-label>
+    <mat-select (selectionChange)="filterGender($event)">
+      <mat-option *ngFor="let gender of genders" [value]="gender.value">
+        {{ gender.name }}
+      </mat-option>
+    </mat-select>
+  </mat-form-field>
+</div>

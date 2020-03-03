@@ -1,3 +1,4 @@
 <div>
-    <characters-list [characters]="characters$"></characters-list>
+  <characters-toolbar (paramsChanged)="fetchCharacters()"></characters-toolbar>
+  <characters-list [characters]="characters$"></characters-list>
 </div>
