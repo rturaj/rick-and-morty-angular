@@ -16,12 +16,14 @@ import { CharactersComponent } from "./pages/characters/characters.component";
 import { AppHeaderComponent } from "./components/general/app-header/app-header.component";
 import { CharactersListComponent } from "./components/characters/characters-list/characters-list.component";
 import { CharactersToolbarComponent } from "./components/characters/characters-toolbar/characters-toolbar.component";
+import { CharactersPaginationComponent } from "./components/characters/characters-pagination/characters-pagination.component";
 
 //angular material components
 import { MatCardModule } from "@angular/material/card";
 import { MatTableModule } from "@angular/material/table";
 import { MatButtonModule } from "@angular/material/button";
 import { MatSelectModule } from "@angular/material/select";
+import { MatPaginatorModule } from "@angular/material/paginator";
 
 const appRoutes: Routes = [
   { path: "characters/:id", component: SingleCharacterComponent },
@@ -36,7 +38,8 @@ const appRoutes: Routes = [
     CharactersComponent,
     AppHeaderComponent,
     CharactersListComponent,
-    CharactersToolbarComponent
+    CharactersToolbarComponent,
+    CharactersPaginationComponent
   ],
   imports: [
     BrowserModule,
@@ -46,7 +49,8 @@ const appRoutes: Routes = [
     MatCardModule,
     MatTableModule,
     MatButtonModule,
-    MatSelectModule
+    MatSelectModule,
+    MatPaginatorModule
   ],
   providers: [ApiService],
   bootstrap: [AppComponent]

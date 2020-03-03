@@ -26,15 +26,11 @@ export class CharactersToolbarComponent {
   ];
 
   filterStatus(event) {
-    console.log("filterStatus");
-
-    this.apiService.setCharactersParams({ status: event.value });
+    this.apiService.setCharactersParams({ status: event.value, page: 1 });
     this.paramsChanged.emit();
   }
   filterGender(event) {
-    console.log("filterGender");
-
-    this.apiService.setCharactersParams({ gender: event.value });
+    this.apiService.setCharactersParams({ gender: event.value, page: 1 });
     this.paramsChanged.emit();
   }
 }

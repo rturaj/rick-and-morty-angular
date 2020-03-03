@@ -1,4 +1,8 @@
 <div>
   <characters-toolbar (paramsChanged)="fetchCharacters()"></characters-toolbar>
   <characters-list [characters]="characters$"></characters-list>
+  <characters-pagination
+    [info]="info"
+    (paramsChanged)="fetchCharacters()"
+  ></characters-pagination>
 </div>

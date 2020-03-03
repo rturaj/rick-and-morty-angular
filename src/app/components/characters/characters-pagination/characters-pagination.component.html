@@ -1,0 +1,6 @@
+<mat-paginator
+  *ngIf="info"
+  [length]="info.count"
+  [pageSize]="15"
+  (page)="paginationHandler($event)"
+></mat-paginator>

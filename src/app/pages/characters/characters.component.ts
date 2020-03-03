@@ -1,21 +1,22 @@
 import { Component, OnInit } from "@angular/core";
 import { Character } from "../../models/character.model";
 import { ApiService } from "../../services/api.service";
-import { CharactersListComponent } from "../../components/characters/characters-list/characters-list.component";
+import { Info } from "src/app/models/info.model";
 
 @Component({
   templateUrl: "./characters.component.html"
 })
 export class CharactersComponent implements OnInit {
   characters$: Character[];
+  info: Info;
 
   constructor(private apiService: ApiService) {}
 
   fetchCharacters() {
-    console.log("fetching");
-    return this.apiService
-      .fetchCharacters()
-      .subscribe((response: any) => (this.characters$ = response.results));
+    return this.apiService.fetchCharacters().subscribe((response: any) => {
+      this.characters$ = response.results;
+      this.info = response.info;
+    });
   }
   ngOnInit() {
     this.fetchCharacters();
